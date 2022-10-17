@@ -17,6 +17,18 @@
     <!--ITEM LOAN-->
     <string name="get_money">Получить деньги</string>
 
+    <!--SETTINGS-->
+    <string name="sum_payment">Сумма</string>
+    <string name="days">Срок(дни)</string>
+    <string name="tips_settings">Полезные советы
+        <b>Как получить займ под 0%(без переплат)?</b> \n
+-Просто оформите займ в организации в которую НЕ
+обращались ранее. \n
+        \n
+        <b>Как получить займ без отказа(с плохой КИ)?</b> \n
+-Необходимо оформить займ сразу в нескольких
+организациях на мелкие суммы.</string>
+
     <!--CONTENT DESCRIPTION-->
     <string name="cd_image_fragment_description">image fragment description</string>
     <string name="cd_image_tips_settings">image tips settings</string>
