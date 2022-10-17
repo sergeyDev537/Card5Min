@@ -20,4 +20,10 @@
         android:label="fragment_description"
         tools:layout="@layout/fragment_item_loan" />
 
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="zaym.in.card5min.fragments.SettingsFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_settings" />
+
 </navigation>
