@@ -67,9 +67,15 @@ public class GetListCount extends AsyncTask<Map<String, String>, Void, String> {
     }
 
     private void convertToList(String strToConvert) {
-        Gson gson = new Gson();
-        Type type = new TypeToken<ArrayList<ModelJSON>>(){}.getType();
-        filesPlaceHolderJSON.postValue(gson.fromJson(strToConvert, type));
+        try {
+            Gson gson = new Gson();
+            Type type = new TypeToken<ArrayList<ModelJSON>>(){}.getType();
+            filesPlaceHolderJSON.postValue(gson.fromJson(strToConvert, type));
+        } catch (Exception e) {
+            e.printStackTrace();
+            filesPlaceHolderJSON.postValue(new ArrayList<>());
+        }
+
     }
 
 

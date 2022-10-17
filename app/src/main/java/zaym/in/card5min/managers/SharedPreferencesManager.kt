@@ -41,10 +41,15 @@ class SharedPreferencesManager(context: Context) {
         return sharedPreferences.getBoolean(key, false)
     }
 
-
-    fun getBoolean(key: String): Boolean{
-        return sharedPreferences.getBoolean(key, false)
+    fun saveFloat(key: String, value: Float){
+        editorSharedPreferences.putFloat(key, value).apply()
     }
+
+    fun loadFloat(key: String): Float{
+        return sharedPreferences.getFloat(key, 0F)
+    }
+
+
 
 
 
