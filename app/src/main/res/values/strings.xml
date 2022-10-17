@@ -14,6 +14,9 @@
     <string name="text_empty_json">Подбираем для Вас наилучшие предложения, зайдите пожалуйста позже</string>
     <string name="apply">Оформить</string>
 
+    <!--ITEM LOAN-->
+    <string name="get_money">Получить деньги</string>
+
     <!--CONTENT DESCRIPTION-->
     <string name="cd_image_fragment_description">image fragment description</string>
     <string name="cd_image_tips_settings">image tips settings</string>

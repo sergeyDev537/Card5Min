@@ -9,6 +9,15 @@
         android:name="zaym.in.card5min.fragments.ListLoanFragment"
         android:label="@string/title_loans"
         tools:layout="@layout/fragment_list_loan" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_item_loan"
+            app:destination="@id/navigation_item_loan" />
     </fragment>
+
+    <fragment
+        android:id="@+id/navigation_item_loan"
+        android:name="zaym.in.card5min.fragments.ItemLoanFragment"
+        android:label="fragment_description"
+        tools:layout="@layout/fragment_item_loan" />
 
 </navigation>
