@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "505511366213",
+    "project_id": "app38-2e21f",
+    "storage_bucket": "app38-2e21f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:505511366213:android:e723f6ef616b8bdd479d2c",
+        "android_client_info": {
+          "package_name": "zaym.in.card5min"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "505511366213-etkv3tmjq3v1mnsvi3ev2q2jluhqru6p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2saDh66QZ6MD2F3MLhBBPEcDnCghh3-E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "505511366213-etkv3tmjq3v1mnsvi3ev2q2jluhqru6p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

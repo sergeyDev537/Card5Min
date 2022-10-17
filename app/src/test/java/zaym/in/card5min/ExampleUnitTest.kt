@@ -1,4 +1,4 @@
-package com.most4dev.card5min
+package zaym.`in`.card5min
 
 import org.junit.Test
 
