@@ -9,22 +9,22 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import kotlinx.android.synthetic.main.fragment_privacy.*
 import zaym.`in`.card5min.R
-import zaym.`in`.card5min.viewModels.AuthViewModel
+import zaym.`in`.card5min.viewModels.PrivacyViewModel
 
 class PrivacyFragment : Fragment() {
 
-    private lateinit var authViewModel: AuthViewModel
+    private lateinit var privacyViewModel: PrivacyViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        authViewModel = ViewModelProvider(this)[AuthViewModel::class.java]
+        privacyViewModel = ViewModelProvider(this)[PrivacyViewModel::class.java]
 
         val root: View = inflater.inflate(R.layout.fragment_privacy, container, false)
 
-        authViewModel.editTextPrivacy()!!.observe(viewLifecycleOwner) {
+        privacyViewModel.editTextPrivacy()!!.observe(viewLifecycleOwner) {
             text_privacy.text = HtmlCompat.fromHtml(
                 it!!,
                 HtmlCompat.FROM_HTML_MODE_LEGACY

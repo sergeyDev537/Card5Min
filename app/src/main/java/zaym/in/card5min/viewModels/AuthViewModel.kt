@@ -18,7 +18,6 @@ class AuthViewModel(application: Application) : AndroidViewModel(application) {
     private var stateAuth: MutableLiveData<Boolean?>? = null
     private var dataActionADS: MutableLiveData<String>? = null
     private var dataCountADS: MutableLiveData<Int>? = null
-    private var textPrivacyPolicy: MutableLiveData<String?>? = null
     private var mSharedPreferencesManager = SharedPreferencesManager(getApplication())
 
     fun loadStateAuth(context: Context): MutableLiveData<Boolean?>? {
@@ -29,23 +28,6 @@ class AuthViewModel(application: Application) : AndroidViewModel(application) {
             )
         }
         return stateAuth
-    }
-
-    fun editTextPrivacy(): MutableLiveData<String?>? {
-        var stringCustom = strPrivacy
-        if (textPrivacyPolicy == null) {
-            textPrivacyPolicy = MutableLiveData()
-            stringCustom =
-                stringCustom.replace("{PACKAGE}", getApplication<Application>().packageName)
-            stringCustom = stringCustom.replace(
-                "{NAME}",
-                getApplication<Application>().getString(R.string.app_name)
-            )
-            textPrivacyPolicy!!.postValue(
-                stringCustom
-            )
-        }
-        return textPrivacyPolicy
     }
 
     fun getActionADS(): LiveData<String> {
