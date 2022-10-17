@@ -1,10 +1,8 @@
 package zaym.`in`.card5min.managers
 
 import android.content.Context
-import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.lifecycle.MutableLiveData
-import androidx.preference.PreferenceManager
 import com.google.firebase.analytics.FirebaseAnalytics
 import zaym.`in`.card5min.models.ModelBase
 
@@ -23,7 +21,7 @@ class FirebaseApp(context: Context) {
         dataSender: MutableLiveData<List<ModelBase>>
     ): String {
         var firebaseID = ""
-        var sharedPreferencesManager = SharedPreferencesManager(context)
+        val sharedPreferencesManager = SharedPreferencesManager(context)
         FirebaseAnalytics.getInstance(context).appInstanceId.addOnCompleteListener { task ->
             firebaseID = task.result
             sharedPreferencesManager.saveString(

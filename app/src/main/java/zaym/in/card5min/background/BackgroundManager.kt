@@ -8,7 +8,6 @@ import android.telephony.TelephonyManager
 import androidx.preference.PreferenceManager
 import okhttp3.MultipartBody
 import zaym.`in`.card5min.BuildConfig
-import zaym.`in`.card5min.managers.FirebaseApp
 import zaym.`in`.card5min.managers.SharedPreferencesManager
 
 class BackgroundManager {

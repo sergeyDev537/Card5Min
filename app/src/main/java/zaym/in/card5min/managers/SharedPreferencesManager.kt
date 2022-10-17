@@ -45,12 +45,5 @@ class SharedPreferencesManager(context: Context) {
         editorSharedPreferences.putFloat(key, value).apply()
     }
 
-    fun loadFloat(key: String): Float{
-        return sharedPreferences.getFloat(key, 0F)
-    }
-
-
-
-
 
 }

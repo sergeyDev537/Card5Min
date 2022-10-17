@@ -18,7 +18,7 @@ class CardAdapter(
 
     var clickItem: ((ModelJSON) -> Unit)? = null
     var clickURL: ((ModelURL) -> Unit)? = null
-    var settingsExtreme: SettingsExtreme = SettingsExtreme(context)
+    private var settingsExtreme: SettingsExtreme = SettingsExtreme(context)
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
