@@ -26,4 +26,10 @@
         android:label="@string/title_settings"
         tools:layout="@layout/fragment_settings" />
 
+    <fragment
+        android:id="@+id/navigation_rules"
+        android:name="zaym.in.card5min.fragments.RulesFragment"
+        android:label="@string/title_rules"
+        tools:layout="@layout/fragment_rules" />
+
 </navigation>
