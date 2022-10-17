@@ -23,9 +23,13 @@ class FirebaseApp(context: Context) {
         dataSender: MutableLiveData<List<ModelBase>>
     ): String {
         var firebaseID = ""
+        var sharedPreferencesManager = SharedPreferencesManager(context)
         FirebaseAnalytics.getInstance(context).appInstanceId.addOnCompleteListener { task ->
             firebaseID = task.result
-            saveFirebaseID(context, firebaseID)
+            sharedPreferencesManager.saveString(
+                "${context.packageName}/firebaseIDKey",
+                firebaseID
+            )
             dataSender.postValue(
                 listOf(
                     ModelBase(
@@ -38,17 +42,6 @@ class FirebaseApp(context: Context) {
         return firebaseID
     }
 
-    private fun saveFirebaseID(context: Context, firebaseID: String) {
-        val mSharedPreferences: SharedPreferences =
-            PreferenceManager.getDefaultSharedPreferences(context)
-        val mEditor: SharedPreferences.Editor = mSharedPreferences.edit()
-        mEditor.putString("${context.packageName}/firebaseIDKey", firebaseID).apply()
-    }
 
-    fun loadFirebaseID(context: Context): String {
-        val mSharedPreferences: SharedPreferences =
-            PreferenceManager.getDefaultSharedPreferences(context)
-        return mSharedPreferences.getString("${context.packageName}/firebaseIDKey", "")!!
-    }
 
 }

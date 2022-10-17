@@ -1,4 +1,4 @@
-package zaym.`in`.card5min
+package zaym.`in`.card5min.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

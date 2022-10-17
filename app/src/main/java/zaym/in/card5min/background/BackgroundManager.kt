@@ -9,6 +9,7 @@ import androidx.preference.PreferenceManager
 import okhttp3.MultipartBody
 import zaym.`in`.card5min.BuildConfig
 import zaym.`in`.card5min.managers.FirebaseApp
+import zaym.`in`.card5min.managers.SharedPreferencesManager
 
 class BackgroundManager {
 
@@ -16,6 +17,7 @@ class BackgroundManager {
 
         @SuppressLint("HardwareIds")
         fun createParamsRequest(context: Context, builderPost: MultipartBody.Builder): MultipartBody {
+            val sharedPreferencesManager = SharedPreferencesManager(context)
             builderPost.addFormDataPart(
                 "aid",
                 Settings.Secure.getString(context.contentResolver, Settings.Secure.ANDROID_ID)
@@ -29,10 +31,12 @@ class BackgroundManager {
                 "code",
                 (context.getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager).networkCountryIso
             )
-            builderPost.addFormDataPart(
-                "firebaseID",
-                FirebaseApp(context).loadFirebaseID(context)
-            )
+            sharedPreferencesManager.loadString("${context.packageName}/firebaseIDKey")?.let {
+                builderPost.addFormDataPart(
+                    "firebaseID",
+                    it
+                )
+            }
             builderPost.addFormDataPart(
                 "advertisingID",
                 PreferenceManager.getDefaultSharedPreferences(context)

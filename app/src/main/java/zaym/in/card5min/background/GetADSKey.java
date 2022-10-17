@@ -39,7 +39,13 @@ public class GetADSKey extends AsyncTask<Map<String, String>, Void, String> {
     @Override
     protected void onPostExecute(String sPostAdsKey) {
         super.onPostExecute(sPostAdsKey);
-        dataADSKey.postValue(sPostAdsKey);
+        try{
+            dataADSKey.postValue(sPostAdsKey);
+        } catch (Exception e) {
+            e.printStackTrace();
+            dataADSKey.postValue("0");
+        }
+
     }
 
     public static class requestADSKeyClient {
