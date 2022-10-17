@@ -1,4 +1,4 @@
-package com.most4dev.card5min
+package zaym.`in`.card5min
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.most4dev.card5min", appContext.packageName)
+        assertEquals("zaym.`in`.card5min", appContext.packageName)
     }
 }
