@@ -7,16 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.SeekBar
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import kotlinx.android.synthetic.main.fragment_settings.*
 import zaym.`in`.card5min.R
 import zaym.`in`.card5min.managers.SettingsExtreme
 import zaym.`in`.card5min.managers.SharedPreferencesManager
-import zaym.`in`.card5min.viewModels.AuthViewModel
 
 class SettingsFragment : Fragment() {
 
-    private lateinit var authViewModel: AuthViewModel
     private lateinit var settingsExtreme: SettingsExtreme
     private lateinit var sharedPreferencesManager: SharedPreferencesManager
 
@@ -30,7 +27,6 @@ class SettingsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        authViewModel = ViewModelProvider(this)[AuthViewModel::class.java]
         settingsExtreme = SettingsExtreme(requireContext())
         sharedPreferencesManager = SharedPreferencesManager(requireContext())
         setMinMaxSeekBarSettings()
