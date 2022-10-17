@@ -30,10 +30,12 @@ public class GetCountAdsServer extends AsyncTask<Map<String, String>, Void, Stri
         try {
             counterRequestADSClient counterRequestADSClient = new counterRequestADSClient();
             responseADSCount = counterRequestADSClient.run(
-                    Constant.Companion.getUrlGetCountAdsServer()
+                    Constant.Companion.getUrlGetCountAdsServer(),
+                    maps[0]
             );
         } catch (IOException e) {
             e.printStackTrace();
+            responseADSCount = "0";
         }
 
         return responseADSCount;
@@ -50,7 +52,7 @@ public class GetCountAdsServer extends AsyncTask<Map<String, String>, Void, Stri
     public static class counterRequestADSClient {
         final OkHttpClient okHttpClientADSCount = new OkHttpClient();
 
-        String run(String url) throws IOException {
+        String run(String url, Map<String, String> hashmap) throws IOException {
             Request requestADSCount = new Request.Builder()
                     .url(url)
                     .post(postData())

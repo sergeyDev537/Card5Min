@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Card5Min</string>
+
+    <!--FIREBASE MESSAGING-->
+    <string name="msg_subscribed" translatable="false">msg_subscribed</string>
+    <string name="msg_subscribe_failed" translatable="false">msg_subscribe_failed</string>
+
 </resources>
