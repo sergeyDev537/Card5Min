@@ -6,8 +6,9 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="zaym.in.card5min.fragments.BlankFragment"
-        android:label="fragment_blank"
-        tools:layout="@layout/fragment_blank" />
+        android:name="zaym.in.card5min.fragments.ListLoanFragment"
+        android:label="@string/title_loans"
+        tools:layout="@layout/fragment_list_loan" >
+    </fragment>
 
 </navigation>

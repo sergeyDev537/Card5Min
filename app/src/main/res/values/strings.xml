@@ -9,7 +9,14 @@
     <string name="title_loans">Займы</string>
     <string name="title_settings">Настройки</string>
     <string name="title_rules">Правила</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--LIST LOANS-->
+    <string name="text_empty_json">Подбираем для Вас наилучшие предложения, зайдите пожалуйста позже</string>
+    <string name="apply">Оформить</string>
+
+    <!--CONTENT DESCRIPTION-->
+    <string name="cd_image_fragment_description">image fragment description</string>
+    <string name="cd_image_tips_settings">image tips settings</string>
+    <string name="cd_image_base_item">image_base_item</string>
 
 </resources>
