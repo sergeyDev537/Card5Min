@@ -8,7 +8,7 @@
     <!--MENU STRINGS-->
     <string name="title_loans">Займы</string>
     <string name="title_settings">Настройки</string>
-    <string name="title_rules">Правила</string>
+    <string name="title_privacy">Политика конфеденциальности</string>
 
     <!--LIST LOANS-->
     <string name="text_empty_json">Подбираем для Вас наилучшие предложения, зайдите пожалуйста позже</string>

@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         AppBarConfiguration(
             setOf(
-                R.id.navigation_home, R.id.navigation_settings, R.id.navigation_rules
+                R.id.navigation_home, R.id.navigation_settings, R.id.navigation_privacy
             )
         )
         navView.setupWithNavController(navController)

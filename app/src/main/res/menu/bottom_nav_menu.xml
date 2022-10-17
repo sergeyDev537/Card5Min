@@ -12,8 +12,8 @@
         android:title="@string/title_settings" />
 
     <item
-        android:id="@+id/navigation_rules"
+        android:id="@+id/navigation_privacy"
         android:icon="@drawable/ic_info"
-        android:title="@string/title_rules" />
+        android:title="@string/title_privacy" />
 
 </menu>
