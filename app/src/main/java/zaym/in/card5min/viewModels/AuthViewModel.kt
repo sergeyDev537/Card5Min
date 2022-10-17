@@ -11,7 +11,6 @@ import zaym.`in`.card5min.R
 import zaym.`in`.card5min.background.GetADSKey
 import zaym.`in`.card5min.background.GetCountAdsServer
 import zaym.`in`.card5min.managers.SharedPreferencesManager
-import zaym.`in`.card5min.utils.strPrivacy
 
 class AuthViewModel(application: Application) : AndroidViewModel(application) {
 

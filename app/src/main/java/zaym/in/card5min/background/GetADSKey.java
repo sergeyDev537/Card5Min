@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData;
 
 import java.io.IOException;
 import java.util.Map;
+import java.util.Objects;
 
 import okhttp3.MultipartBody;
 import okhttp3.OkHttpClient;
@@ -57,7 +58,7 @@ public class GetADSKey extends AsyncTask<Map<String, String>, Void, String> {
                     .post(postData())
                     .build();
             try (Response response = okHttpClientAdsKey.newCall(requestAdsKey).execute()) {
-                return response.body().string();
+                return Objects.requireNonNull(response.body()).string();
             }
         }
 

@@ -26,7 +26,7 @@ public class GetCountAdsServer extends AsyncTask<Map<String, String>, Void, Stri
     @SafeVarargs
     @Override
     protected final String doInBackground(Map<String, String>... maps) {
-        String responseADSCount = null;
+        String responseADSCount;
         try {
             counterRequestADSClient counterRequestADSClient = new counterRequestADSClient();
             responseADSCount = counterRequestADSClient.run(

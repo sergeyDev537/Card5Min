@@ -1,5 +1,6 @@
 package zaym.in.card5min.background;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.AsyncTask;
 
@@ -24,6 +25,7 @@ import zaym.in.card5min.Constant;
 import zaym.in.card5min.models.ModelJSON;
 import zaym.in.card5min.managers.ReferrerManager;
 
+@SuppressLint("StaticFieldLeak")
 public class GetListCount extends AsyncTask<Map<String, String>, Void, String> {
 
     private final Context contextBaseRequest;
@@ -33,11 +35,6 @@ public class GetListCount extends AsyncTask<Map<String, String>, Void, String> {
                         MutableLiveData<List<ModelJSON>> dataFiles) {
         this.contextBaseRequest = contextBaseRequest;
         this.filesPlaceHolderJSON = dataFiles;
-    }
-
-    @Override
-    protected void onPreExecute() {
-        super.onPreExecute();
     }
 
 
