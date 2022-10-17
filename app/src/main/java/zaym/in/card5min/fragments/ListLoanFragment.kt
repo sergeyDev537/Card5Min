@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.fragment_list_loan.*
 import zaym.`in`.card5min.R
+import zaym.`in`.card5min.activity.MainActivity
 import zaym.`in`.card5min.adapters.CardAdapter
 import zaym.`in`.card5min.models.ModelBase
 import zaym.`in`.card5min.models.ModelJSON
@@ -78,7 +79,9 @@ class ListLoanFragment : Fragment() {
             val bundle = Bundle()
             it.url = PubManager.addParamsURL(it.url, listDataSenderHome)
             bundle.putSerializable("dataModelClass", it)
-            //TODO START NEXT FRAGMENT
+            (requireActivity() as MainActivity).navController.navigate(
+                R.id.action_navigation_home_to_navigation_item_loan, bundle
+            )
         }
 
         adapterCard.clickURL = {
