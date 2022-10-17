@@ -48,6 +48,10 @@ dependencies {
     /*LOTTIE*/
     implementation 'com.airbnb.android:lottie:4.2.2'
 
+    /*NAVIGATION*/
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.2'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.2'
+
     /*PREFERENCE*/
     implementation 'androidx.preference:preference-ktx:1.2.0'
 
