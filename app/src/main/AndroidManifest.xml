@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Card5Min"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name="zaym.in.card5min.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

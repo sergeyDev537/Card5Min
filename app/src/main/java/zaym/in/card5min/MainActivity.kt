@@ -1,7 +1,8 @@
-package com.most4dev.card5min
+package zaym.`in`.card5min
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import zaym.`in`.card5min.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
